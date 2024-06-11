@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pageWrap{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: brown; */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.button{
+  margin: 10px;
+}
+
+.noteNameInput{
+  /* border: none;
+  background-color: aqua; */
+  width: 90%;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0cm;
+  outline: none;
+}
+
+.noteNameInput:focus{
+  border-top: none;
+  /* background-color: aqua;  */
+}
+
+.pageContent{
+  display: flex;
+  width: 100vw;
+  /* height: 800px; */
+  height: 100%;
+  /* flex: 1; */
+}
+
+.sidebar {
+  width: 20%;
+  height: 100%;
+  /* background-color: aliceblue; */
+  background-color: rgba(212, 212, 212, 0.3);
+  /* background-color: aqua; */
+
+  /* margin-right: 2%; */
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-color:rgba(212, 212, 212, 0.5) ;
+}
+
+.noteDetail{
+  width: 80%;
+  height: 100%;
+  /* background-color: blueviolet; */
+}
+
+.addbuttonWrap{
+  /* position: absolute;
+  bottom: 0px; */
+  width: 100%;
+  height: 45px;
+}
+
+.addButton{
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.notes-list{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 96vh;
+  overflow: hidden;
+}
+
+.caption{
+  height: 5%;
+  /* background-color: aqua; */
+  font-size: 15px;
+  padding: 5px;
+  font-weight: 800;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  background-color: rgba(212, 212, 212, 0.2);
+}
+
+.noteCaption{
+  width: 100%-10px;
+  height: 60px;
+  border: 0cm;
+  outline: none; 
+  /* background-color: antiquewhite; */
+  font-size: 25px;
+  padding-left: 30px;
+  padding-top: 15px;
+  font-weight: 800;
+}
+
+.note-content{
+  display: flex;
+  flex-direction: column;
+  /* background-color: brown; */
+  height: 100%;
+  
+}
+
+.noteContent{
+  outline: 0;
+  border: none;
+  font-size: 16px;
+  /* height: 80%; */
+  flex-grow: 1;
+  padding: 30px;
+  padding-top: 15px;
+  /* background-color: aqua; */
+}
+
+/* .app{
+  height: 960px;
+} */
+
+
+.noteLink {
+  text-decoration: none;
+  color: inherit; /* 继承父元素的文字颜色 */
+  outline: none; /* 去除点击后的边框 */
+  outline-style: none; /* 去除点击后的边框样式 */
+
+}
+
+.noteLink:hover {
+  color: black; 
+}
+
+.list{
+  /* background-color: aqua; */
+  height: 90%;
+  overflow-y: auto;
+}
+
+/* 隐藏默认滚动条 */
+.list::-webkit-scrollbar {
+  width: 6px; /* 设置滚动条的宽度 */
+}
+
+/* 滚动条轨道 */
+.list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 设置滚动条轨道的背景色 */
+  border-radius: 3px;
+}
+
+/* 滚动条滑块 */
+.list::-webkit-scrollbar-thumb {
+  background: #b3b0b0; /* 设置滚动条滑块的颜色 */
+  border-radius: 0px;
+}
+
+/* 滚动条滑块在悬停时的颜色 */
+.list::-webkit-scrollbar-thumb:hover {
+  background: #555; /* 设置滚动条滑块在悬停时的颜色 */
+}
+
+.noteInfo{
+  height: 40px;
+  background-color: #7e837f2e;
+  border-bottom:  solid;
+  border-color: #7e837f2e;;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 30px;
+  color: #525050;
+}
+
+.timeInfo{
+  margin-left: 40px;
+  font-size: 12px;
+}
+
+.search{
+ outline: none; 
+ display: flex;
+ align-items: center;
+ border-bottom: solid;
+ border-color: #5654543d;
+}
+
+.searchInput{
+  outline: none;
+  border: 0;
+  width: 70%;
+  height: 40px;
+  /* background-color: rgba(116, 174, 122, 0.287); */
+  background-color: rgba(0, 0, 0, 0);
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.deleteIcon{
+  margin-left: auto;
+  position: relative;
+  right: 25px;
+}
