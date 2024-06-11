@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './SideBar.css';
 import Search from './Search';
 import NoteList from './NoteList';
 
@@ -9,7 +8,6 @@ const SideBar = (props) => {
     return (
         <div className="sidebar">
             <Search setSearchQuery={setSearchQuery} />
-
 
             <NoteList notes={notes} 
                         isEditing={isEditing} 

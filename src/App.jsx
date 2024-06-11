@@ -79,22 +79,12 @@ function App() {
             </div>
           </div>
           <div className='pageContent'>
-          <SideBar  setSearchQuery={setSearchQuery}
-                    notes={filteredNotes} 
-                    isEditing={isEditing} 
-                    setIsEditing={setIsEditing} 
-                    updateNoteTitle={updateNoteTitle}
-                    addNote={addNote}/>
-
-            {/* <div className="sidebar">
-            <Search setSearchQuery={setSearchQuery} />
-            <NoteList notes={filteredNotes} 
+            <SideBar  setSearchQuery={setSearchQuery}
+                      notes={filteredNotes} 
                       isEditing={isEditing} 
                       setIsEditing={setIsEditing} 
                       updateNoteTitle={updateNoteTitle}
                       addNote={addNote}/>
-            </div> */}
-
 
             <div className="noteDetail">
             <Routes>
