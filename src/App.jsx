@@ -14,7 +14,6 @@ function App() {
     const savedNotes = localStorage.getItem('notes');
     return savedNotes ? JSON.parse(savedNotes) : [];
   });
-  // const [currentNote, setCurrentNote] = useState(null);
 
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,7 +55,7 @@ function App() {
   const updateNoteTitle = (id, title) => {
     const updatedNotes = notes.map((note) => (note.id === id ? { ...note, title } : note));
     setNotes(updatedNotes);
-    setIsEditing(null); // 编辑完成后退出编辑状态
+    setIsEditing(null); 
   };
 
   const updateNote = (id, updatedNote) => {

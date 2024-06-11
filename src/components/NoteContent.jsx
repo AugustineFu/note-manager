@@ -6,7 +6,9 @@ import './NoteContent.css'
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const NoteContent = ({ notes, updateNote, deleteNote }) => {
+const NoteContent = (props) => {
+    const { notes, updateNote, deleteNote } = props;
+
     const { id } = useParams();
 
     const [note, setNote] = useState(null);
@@ -25,16 +27,12 @@ const NoteContent = ({ notes, updateNote, deleteNote }) => {
 
     useEffect(() => {
         const foundNote = notes.find(n => n.id === id);
-        // console.log("Found id: " + foundNote.id);
-        // console.log("Found:" + foundNote.content);
         if (foundNote) {
             setNote(foundNote);
             setTitle(foundNote.title);
             setContent(foundNote.content);
             setCt(foundNote.createTime);
             setUt(foundNote.updateTime);
-            // console.log("ct in add: " + ct)
-            // console.log("ut in add: " + ut)
         }
     }, [id, notes]);
 
@@ -88,13 +86,6 @@ const NoteContent = ({ notes, updateNote, deleteNote }) => {
         setIsSaving(true);
     };
 
-
-
-    // const handleSave = () => {
-    //     updateNote(id, { ...note, title, content });
-    //     navigate('/');
-    // };
-
     return (
         <div className="note-content">
             <div className="noteInfo">
@@ -113,7 +104,6 @@ const NoteContent = ({ notes, updateNote, deleteNote }) => {
             <input
                 type="text"
                 value={title}
-                // onChange={(e) => setTitle(e.target.value)}
                 onChange={handleTitleChange}
                 className="noteCaption"
             />
@@ -121,12 +111,9 @@ const NoteContent = ({ notes, updateNote, deleteNote }) => {
 
             <textarea
                 value={content}
-                // onChange={(e) => setContent(e.target.value)}
                 onChange={handleContentChange}
                 className="noteContent"
             />
-        {/* <button onClick={handleSave}>保存</button>
-        <button onClick={() => navigate('/')}>取消</button> */}
         </div>
     );
     };
